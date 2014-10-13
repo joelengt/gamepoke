@@ -1,31 +1,90 @@
 function Pokemon(n,v,a)
-{
+{	
 	this.grito="Pika!!!";
 	this.nombre=n;
 	this.vida=v;
 	this.ataque=a;
 	this.gritar=function()
 	{
-		aler(this.grito);
-	}
+		alert(this.grito);
+	}	
 }
-
+ 
 function Inicio()
 {
-	var pikachu=new Pokemon("Pikachu",100,55);
-	var bulbasaur=new Pokemon("Bulbasaur",90,50);
-	var charmander=new Pokemon("charmander",100,60);	
-	var rattata=new Pokemon("rattata",60,20);
-	rattata.grito="Rattttaaaaatata!!";
-	bulbasaur.grito="Basourrr!!";
-	charmander.grito="CHARR!!!";
-	nombrePokemon.innerText=("Nombre Pokemon :"+bulbasaur.nombre);
-	datosPokemon1.innerText=("Vida Pokemon: "+bulbasaur.vida);
-	datosPokemon2.innerText=("Ataque Pokemon: "+bulbasaur.ataque);
-	datosPokemon3.innerText=("Grito Pokemon: "+bulbasaur.grito);
+	var pikachu =new Pokemon("Pikachu",100,55);
+	var bulbasaur =new Pokemon("Bulbasaur",90,50);
+	var charmander=new Pokemon("Charmander",100,52);
+	var rattata =new Pokemon("Rattata",40,20);
+	//asignado los gritos
+	bulbasaur.grito="Basuuurr!!";
+	charmander.grito="Char char!!";
+	rattata.grito="rattattata!!";
+	//insetando datos en html
+	alert("Escoge Pokemon : Pikachu=(P) ,Bulbasaur(B),Charmander(C),Rattata(R)");
+	var elec=prompt("Insertar Pokemon");
+	var img = document.createElement("img");	
 
-
+		if(elec=="P" || elec=="p")
+		{
+			var a=document.getElementById("nombrePokemon");
+			a.innerHTML=("Nombre Pokemon: "+pikachu.nombre);
+			var b=document.getElementById("datosPokemon1");
+			b.innerHTML=("Vida Pokemon: "+ pikachu.vida+ "<br/>" +"Ataque Pokemon: "+pikachu.ataque +"<br/>"+"Grito Pokemon: "+pikachu.grito);
+			img.src="image/a.png";
+			document.getElementById("imagen").appendChild(img);
+		}
+		else if (elec=="B" || elec=="b")
+		{
+			var c=document.getElementById("nombrePokemon");
+			c.innerHTML=("Nombre Pokemon: "+ bulbasaur.nombre);
+			var d=document.getElementById("datosPokemon1");
+			d.innerHTML=("Vida Pokemon: "+ bulbasaur.vida+ "<br/>"+ "Ataque Pokemon: "+bulbasaur.ataque+"<br/>"+ "Grito Pokemon: "+ bulbasaur.grito);
+			img.src="image/d.png";
+			document.getElementById("imagen").appendChild(img);
+		}
+		else if (elec=="C" || elec=="c")
+		{
+			var e=document.getElementById("nombrePokemon");
+			e.innerHTML=("Nombre Pokemon: "+ charmander.nombre);
+			var f=document.getElementById("datosPokemon1");
+			f.innerHTML=("Vida Pokemon: "+ charmander.vida+ "<br/>"+ "Ataque Pokemon: "+charmander.ataque+"<br/>"+ "Grito Pokemon: "+ charmander.grito);
+			img.src="image/c.gif";
+			document.getElementById("imagen").appendChild(img);
+		}
+		else if( elec=="R" || elec=="r")
+		{
+			var g=document.getElementById("nombrePokemon");
+			g.innerHTML=("Nombre Pokemon: "+ rattata.nombre);
+			var h=document.getElementById("datosPokemon1");
+			h.innerHTML=("Vida Pokemon: "+ rattata.vida+ "<br/>"+ "Ataque Pokemon: "+rattata.ataque+"<br/>"+ "Grito Pokemon: "+ rattata.grito);
+			img.src	="image/b.png";
+			document.getElementById("imagen").appendChild(img);
+		}
+		else
+		{
+			var l =document.getElementById("nombrePokemon");
+			l.innerHTML="ELEMENTO NO CORRECTO (REFRESQUE CON F5)";
+		}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
